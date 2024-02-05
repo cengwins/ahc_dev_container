@@ -29,6 +29,12 @@ RUN git clone https://github.com/cengwins/ahc && \
 
 RUN pip3 install adhoccomputing
 
-RUN git clone https://github.com/cengwins/ahc_distalg_template.git
+ENV HOME /root
 
-WORKDIR /ahc_distalg_template
+WORKDIR /root
+
+COPY . .
+
+WORKDIR /root/code
+
+CMD ["sleep", "infinity"]
